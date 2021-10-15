@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">homework_3</string>
+    <string name="follow">follow</string>
+    <string name="reach">Reach</string>
+    <string name="sharemeter">Sharemeter</string>
+    <string name="posts">Posts</string>
+    <string name="social_score">Social score</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="followBtnText">Follow</string>
+    <string name="_12_min_ago">12 min ago</string>
+    <string name="frank">Frank</string>
+    <string name="tommy">Tommy</string>
+    <string name="_30_min_ago">30 min ago</string>
+    <string name="elizabeth">Elizabeth</string>
+    <string name="_1_hour_ago">1 hour ago</string>
+    <string name="emily">Emily</string>
+    <string name="recently">recently</string>
+    <string name="harry">Harry</string>
+    <string name="yesterday">yesterday</string>
+    <string name="dave">Dave</string>
+    <string name="_5_hour_ago">5 hour ago</string>
+    <string name="adam">Adam</string>
+    <string name="online">online</string>
+    <string name="todo">TODO</string>
+</resources>
