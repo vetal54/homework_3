@@ -6,20 +6,20 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.homework_3.ViewModel.UserViewModel
+import com.example.homework_3.ViewModel.UserFullInfoViewModel
 import de.hdodenhof.circleimageview.CircleImageView
 
 
-class UserFullInfo : AppCompatActivity() {
+class UserFullInfoActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: UserViewModel
+    private lateinit var viewModel: UserFullInfoViewModel
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_full_info)
 
-        viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(UserFullInfoViewModel::class.java)
 
         val userName: TextView = findViewById(R.id.userName)
         val userAva : CircleImageView = findViewById(R.id.profile_image)

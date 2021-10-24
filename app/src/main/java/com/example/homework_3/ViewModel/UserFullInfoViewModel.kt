@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homework_3.UserData
 
-class UserViewModel : ViewModel() {
+class UserFullInfoViewModel : ViewModel() {
 
     val userData: UserData = UserData()
 

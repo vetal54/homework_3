@@ -36,11 +36,11 @@
                     android:id="@+id/userName1"
                     style="@style/nameStyle"
                     android:fontFamily="@font/roboto"
-                    android:text="@string/adam" />
+                    android:text="" />
 
                 <TextView
                     android:id="@+id/lastSeen1"
-                    android:text="@string/_12_min_ago"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -76,13 +76,13 @@
 
                 <TextView
                     android:id="@+id/userName2"
-                    android:text="@string/frank"
+                    android:text=""
                     android:textSize="@dimen/textSize"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen2"
-                    android:text="@string/online"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -118,12 +118,12 @@
 
                 <TextView
                     android:id="@+id/userName3"
-                    android:text="@string/tommy"
+                    android:text=""
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen3"
-                    android:text="@string/_30_min_ago"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -158,12 +158,12 @@
 
                 <TextView
                     android:id="@+id/userName4"
-                    android:text="@string/elizabeth"
-                    style="@style/nameStyle" />
+                    style="@style/nameStyle"
+                    android:text="" />
 
                 <TextView
                     android:id="@+id/lastSeen4"
-                    android:text="@string/_1_hour_ago"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -197,12 +197,12 @@
 
                 <TextView
                     android:id="@+id/userName5"
-                    android:text="@string/emily"
+                    android:text=""
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen5"
-                    android:text="@string/recently"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -237,12 +237,12 @@
 
                 <TextView
                     android:id="@+id/userName6"
-                    android:text="@string/harry"
+                    android:text=""
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen6"
-                    android:text="@string/yesterday"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
@@ -262,10 +262,11 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image7"
+                android:layout_marginBottom="5dp"
                 style="@style/avaStyle"
                 android:src="@drawable/avatar6"
                 app:civ_border_width="2dp"
-                app:civ_border_color="#FF000000"/>
+                app:civ_border_color="#FF000000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -276,12 +277,12 @@
 
                 <TextView
                     android:id="@+id/userName7"
-                    android:text="@string/dave"
+                    android:text=""
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen7"
-                    android:text="@string/_5_hour_ago"
+                    android:text=""
                     style="@style/lastSeenStyle" />
 
                 <Button
