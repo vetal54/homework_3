@@ -1,4 +1,4 @@
-package com.example.homework_3
+package com.example.homework_3.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,7 +6,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.homework_3.ViewModel.UserFullInfoViewModel
+import com.example.homework_3.R
+import com.example.homework_3.viewmodel.UserFullInfoViewModel
 import de.hdodenhof.circleimageview.CircleImageView
 
 
@@ -19,7 +20,7 @@ class UserFullInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_full_info)
 
-        viewModel = ViewModelProvider(this).get(UserFullInfoViewModel::class.java)
+        viewModel = ViewModelProvider(this)[UserFullInfoViewModel::class.java]
 
         val userName: TextView = findViewById(R.id.userName)
         val userAva : CircleImageView = findViewById(R.id.profile_image)
@@ -33,26 +34,26 @@ class UserFullInfoActivity : AppCompatActivity() {
 
         val arguments = intent.extras
         val index = arguments?.getInt("id")
-        viewModel.loadUserData()
+        viewModel.loadUsersData()
 
         viewModel.userLiveData.observe(this, Observer {
-            userName.text = it.usersArrayList[index!!].name
+            userName.text = it[index!!].name
             userAva.setImageDrawable(
                 getDrawable(
                     resources.getIdentifier(
-                        it.usersArrayList[index].avaPhoto,
+                        it[index].avaPhoto,
                         null,
                         packageName
                     )
                 )
             )
-            userInfo.text = it.usersArrayList[index].aboutUser
-            following.text = it.usersArrayList[index].following
-            followers.text = it.usersArrayList[index].followers
-            socialScore.text = it.usersArrayList[index].socialScore
-            posts.text = it.usersArrayList[index].posts
-            reach.text = it.usersArrayList[index].reach
-            sharemeter.text = it.usersArrayList[index].sharemeter
+            userInfo.text = it[index].aboutUser
+            following.text = it[index].following
+            followers.text = it[index].followers
+            socialScore.text = it[index].socialScore
+            posts.text = it[index].posts
+            reach.text = it[index].reach
+            sharemeter.text = it[index].sharemeter
         })
     }
 }

@@ -10,75 +10,64 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="281dp"
-
         android:background="@drawable/bg"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
+        tools:ignore="MissingConstraints" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         style="@style/avaStyle"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/noavatar"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-          />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/userName"
         style="@style/nameStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="14dp"
+        android:inputType="text"
         android:textSize="35sp"
-        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        android:autofillHints=""
+        tools:ignore="LabelFor" />
 
-    <TextView
+    <EditText
         android:id="@+id/userInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
-        android:gravity="center"
         android:fontFamily="@font/roboto"
+        android:gravity="center"
         android:textSize="20sp"
-        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userName"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/followBtnText"
-        android:textSize="@dimen/textSize"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/linear"
-        app:layout_constraintTop_toBottomOf="@+id/userInfo" />
+        tools:ignore="LabelFor,MissingConstraints,TextFields"
+        android:autofillHints="" />
 
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/button">
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userInfo">
 
         <LinearLayout
             android:id="@+id/firstLine0"
@@ -86,20 +75,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
                 android:id="@+id/followerText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
 
-            <TextView
+            <EditText
                 android:id="@+id/followingText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:ems="10"
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
 
-            <TextView
+            <EditText
                 android:id="@+id/socialScoreText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:ems="10"
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
 
         </LinearLayout>
 
@@ -131,20 +131,26 @@
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
                 android:id="@+id/postsText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
 
-            <TextView
+            <EditText
                 android:id="@+id/sharemeterText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
 
-            <TextView
+            <EditText
                 android:id="@+id/reachText"
                 style="@style/viewElementStyle1"
-                android:text="" />
+                android:inputType="number"
+                android:autofillHints=""
+                tools:ignore="LabelFor" />
         </LinearLayout>
 
         <LinearLayout
@@ -169,6 +175,25 @@
                 style="@style/viewElementStyle"
                 android:text="@string/reach" />
         </LinearLayout>
+
+
+
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+
+        app:backgroundTint="#AD03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
